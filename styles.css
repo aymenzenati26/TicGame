@@ -9,7 +9,7 @@ body {
 
 .computer-frame {
     width: 600px;
-    height: 400px;
+    height: 500px;
     background-color: #333;
     border-radius: 15px;
     padding: 20px;
@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .tic-tac-toe {
@@ -50,10 +51,16 @@ body {
     font-size: 2em;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
 }
 
 .cell:hover {
     background-color: #ddd;
+}
+
+.cell.win {
+    background-color: #4caf50; /* Highlight color for winning cells */
+    color: white;
 }
 
 .status {
@@ -62,8 +69,9 @@ body {
     font-size: 1.2em;
     font-weight: bold;
 }
-.restart-button {
-    margin-top: 20px;
+
+.restart-button, .two-player-button, .start-ai-button {
+    margin-top: 10px;
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -76,6 +84,6 @@ body {
     transition: background-color 0.3s;
 }
 
-.restart-button:hover {
+.restart-button:hover, .two-player-button:hover, .start-ai-button:hover {
     background-color: #0056b3;
 }
